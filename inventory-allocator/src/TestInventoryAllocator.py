@@ -20,7 +20,7 @@ class TestInventoryAllocator(unittest.TestCase):
         # test exact match at same warehouse
         self.ia.set_items({'apple': 1, 'pear': 2})
         self.ia.set_warehouse([{'name': 'owd', 'inventory': {'apple': 1, 'pear': 2}}])
-        self.assertEqual(self.ia.cheapest_shipment(), [{'owd':{'apple': 1, 'pear': 2}}])
+        self.assertEqual(self.ia.cheapest_shipment(), [{'owd': {'apple': 1, 'pear': 2}}])
 
     def test_inexact_match(self):
         # test inexact match at one warehouse
